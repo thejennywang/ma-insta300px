@@ -1,4 +1,4 @@
-<%  if @posts.any? %>
+<% if @posts.any? %>
 	<% @posts.each do |post| %>
 		<h3><%= post.title %></h3>
 		<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
@@ -7,4 +7,4 @@
 	No posts yet
 <% end %> 
 
-<%= link_to 'New post', new_post_path %>
+<br><%= link_to 'New post', new_post_path %>

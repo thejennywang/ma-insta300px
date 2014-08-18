@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
@@ -29,9 +28,15 @@ gem 'spring',        group: :development
 group :development, :test do
 	gem 'rspec-rails'
 	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'rspec-collection_matchers'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk'
+gem 'devise'
+gem 'warden'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
