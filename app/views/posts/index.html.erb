@@ -1,0 +1,10 @@
+<%  if @posts.any? %>
+	<% @posts.each do |post| %>
+		<h3><%= post.title %></h3>
+		<%= image_tag post.picture.url, class: 'uploaded-pic' %>
+	<% end %>
+<% else %>
+	No posts yet
+<% end %> 
+
+<%= link_to 'New post', new_post_path %>
