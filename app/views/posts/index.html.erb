@@ -1,3 +1,6 @@
+<br>
+<%= link_to 'New post', new_post_path %>
+<br>
 <% if @posts.any? %>
 	<% @posts.each do |post| %>
 		<h3><%= post.title %></h3>
@@ -6,5 +9,3 @@
 <% else %>
 	No posts yet
 <% end %> 
-
-<br><%= link_to 'New post', new_post_path %>
