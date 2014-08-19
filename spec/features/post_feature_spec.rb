@@ -47,6 +47,15 @@ describe 'Posts' do
 				expect(current_path).to eq '/posts'
 			end
 
+			it 'displays no image, if no picture attached' do
+				visit posts_path
+				click_link 'New post'
+				fill_in 'Title', with: 'A brand new post'
+				click_button 'Create post'
+
+				expect(page).not_to have_css 'img.uploaded-pic'
+			end
+
 			it 'can attach an image to a post' do
 				visit posts_path
 				click_link 'New post'
