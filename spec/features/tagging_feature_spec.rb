@@ -11,7 +11,7 @@ describe 'tagging post' do
 		visit posts_path
 		click_link 'New post'
 		fill_in 'Title', with: "A brand new post"
-		fill_in 'Tags', with: '#yolo, #swag'
+		fill_in 'Taggymajingys', with: '#yolo, #swag'
 		click_button 'Create post'
 
 		expect(page).to have_link '#yolo'
