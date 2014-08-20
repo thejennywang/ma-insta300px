@@ -2,17 +2,7 @@
 <%= link_to 'New post', new_post_path %>
 <br>
 <% if @posts.any? %>
-	<% @posts.each do |post| %>
-		<h3><%= post.title %></h3>
-
-		<% if post.picture.present? %>
-			<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
-	<% end %>
-		
-		<% post.tags.each do |tag| %>
-			<%= link_to tag.text, '#' %>
-		<% end %>
-	<% end %>
+	<%= render @posts %>
 <% else %>
 	No posts yet
 <% end %> 

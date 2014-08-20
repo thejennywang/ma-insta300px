@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		@post.title = 'Title here'
 	end
 
 	def create
