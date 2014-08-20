@@ -17,9 +17,46 @@
 @import "bootstrap";
 
 body {
-  margin-top: 60px;
+  margin-top: 80px;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFFFFF;
 }
 
 .form-group {
   color: #FFF;
+}
+
+@media(max-width: 767px) {
+  .post {
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin-top: 0;
+    } 
+
+  }
+}
+
+  .post {
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin-top: 0;
+    } 
+
+  }
+
+
+footer {
+  text-align: center;
 }

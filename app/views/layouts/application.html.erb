@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/p.ico">
+    <link rel="icon" href="//d36xtkk24g8jdx.cloudfront.net/bluebar/c38fc5b/images/ico/favicon.ico">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     
@@ -16,21 +16,24 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">The Instagram App</a>
-        </div>
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                  <a class="navbar-brand" href="/">The Instagram App</a>
+              </div>
         <div class="navbar-collapse collapse">
 
           <% if user_signed_in? %>
             <%= form_for(session, as: :user, url: destroy_user_session_path, method: :delete, html: { class: 'navbar-form navbar-right' } ) do |f| %>
               <div class="form-group"> Logged in as <%= current_user.email %></div>
-              <%= f.submit "Sign out", class: "btn btn-danger" %>
+              <%= link_to new_post_path, class: 'new-post btn btn-success' do %>
+                New Post <span class="glyphicon glyphicon-edit"></span> 
+              <% end%>
+                <%= f.submit "Sign out", class: "btn btn-danger" %>
             <% end %>
           <% else %>
             <%= form_for(User.new, as: :user, url: new_user_session_path, html: { class: 'navbar-form navbar-right' } ) do |f| %>
@@ -53,7 +56,12 @@
     <main class="container">
     
       <%= yield %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+       <hr>
+      <footer>
+        <p>&copy; Jenny Wang</p>
+      </footer>
     </main>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>

@@ -1,9 +1,15 @@
-<h3><%= post.title %></h3>
+<article class='post col-sm-6 col-md-4'>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h3><%= post.title %></h3>
 
-<% if post.picture.present? %>
-	<%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
-<% end %>
+      <% if post.picture.present? %>
+      <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+      <% end %><br>
 
-<% post.tags.each do |tag| %>
-	<%= link_to tag.text, tag %>
-<% end %>
+      <% post.tags.each do |tag| %>
+      <%= link_to tag.text, tag %>
+      <% end %>
+    </div>
+  </div>
+</article>

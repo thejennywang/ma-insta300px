@@ -38,7 +38,7 @@ describe 'Posts' do
 		context 'creating posts' do
 			it 'adds the post from a form' do
 				visit posts_path
-				click_link 'New post'
+				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
 				click_button 'Create post'
 
@@ -48,7 +48,7 @@ describe 'Posts' do
 
 			it 'displays no image, if no picture attached' do
 				visit posts_path
-				click_link 'New post'
+				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
 				click_button 'Create post'
 
@@ -57,7 +57,7 @@ describe 'Posts' do
 
 			it 'can attach an image to a post' do
 				visit posts_path
-				click_link 'New post'
+				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
 				attach_file 'Picture', Rails.root.join('spec/images/time.jpg')
 				click_button 'Create post'

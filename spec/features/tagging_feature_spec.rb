@@ -9,7 +9,7 @@ describe 'tagging post' do
 
 	it 'displays tags as links under posts' do
 		visit posts_path
-		click_link 'New post'
+		click_link 'New Post'
 		fill_in 'Title', with: "A brand new post"
 		fill_in 'Tags', with: '#yolo, #swag'
 		click_button 'Create post'
@@ -29,7 +29,7 @@ describe 'filtering by tags' do
 		visit posts_path
 		click_link '#swag'
 
-		expect(page).to have_css 'h1', text: 'Posts tagged with #swag'
+		expect(page).to have_css 'h1', text: '#swag'
 		expect(page).to have_content 'Post A'
 		expect(page).not_to have_content 'Post B'
 	end
