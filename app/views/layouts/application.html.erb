@@ -23,35 +23,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The Instagram App</a>
+          <a class="navbar-brand" href="/">The Instagram App</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
+
+          <% if user_signed_in? %>
+            <%= form_for(session, as: :user, url: destroy_user_session_path, method: :delete, html: { class: 'navbar-form navbar-right' } ) do |f| %>
+              <div class="form-group"> Logged in as <%= current_user.email %></div>
+              <%= f.submit "Sign out", class: "btn btn-danger" %>
+            <% end %>
+          <% else %>
+            <%= form_for(User.new, as: :user, url: new_user_session_path, html: { class: 'navbar-form navbar-right' } ) do |f| %>
+              <div class="form-group">
+                <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+              </div>
+
+              <%= f.submit "Sign in", class: "btn btn-success" %>
+              <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
+            <% end %>
+          <% end %>
         </div><!--/.navbar-collapse -->
 
       </div>
     </div>
-
-    <%= notice %>
+    <main class="container">
     
-    <% if user_signed_in? %>
-      Logged in as <%= current_user.email %>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', new_user_session_path %>
-      <%= link_to 'Sign up', new_user_registration_path %>
-    <% end %>
-
-    <%= yield %>
-
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= yield %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    </main>
   </body>
 </html>

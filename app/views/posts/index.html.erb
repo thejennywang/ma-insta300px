@@ -1,9 +1,9 @@
-<main class='container'>
+  <% if user_signed_in? %>
   <br><%= link_to 'New post', new_post_path %><br>
-  
+  <% end %>
+
   <% if @posts.any? %>
   	<%= render @posts %>
   <% else %>
   	No posts yet
   <% end %> 
-</main>

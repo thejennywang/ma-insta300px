@@ -2,12 +2,11 @@ require 'rails_helper'
 
 describe 'Posts' do
 
-	context 'user logged out' do
-		it 'should prompt user to log in' do
-			visit posts_path
-			click_link 'New post'
+	context 'user signed out' do
+		it 'should prompt user to sign in' do
+			visit new_post_path
 
-			expect(page).to have_content 'Log in'
+			expect(page).to have_content 'Sign in'
 		end
 	end
 
