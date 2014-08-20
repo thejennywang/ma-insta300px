@@ -36,10 +36,12 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'devise'
 gem 'warden'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
 group :production do
   gem 'rails_12factor'
-  gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 end
 
 
