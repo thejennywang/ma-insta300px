@@ -1,5 +1,8 @@
 Instagram
 ========
+___
+My Instagram app on Heroku: [http://theinstagramapp.herokuapp.com/](http://theinstagramapp.herokuapp.com/)
+___
 
 ![Instagram](http://www.esato.com/gfx/news/img/facebook-buys-instagram_1334005838.jpg)
 
@@ -13,6 +16,5 @@ This week's project is a clone of [Instagram](http://instagram.com). The goal is
 * Bootstrap
 * Sass
 * Creating APIs using Rails + [jBuilder](https://github.com/rails/jbuilder)
-
 
 For this project, we aim be deploying much more regularly - ideally a few times every day.
