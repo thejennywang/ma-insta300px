@@ -60,7 +60,7 @@ describe 'Posts' do
 				visit posts_path
 				click_link 'New post'
 				fill_in 'Title', with: 'A brand new post'
-				attach_file 'Picture', Rails.root.join('spec/images/london.jpg')
+				attach_file 'Picture', Rails.root.join('spec/images/time.jpg')
 				click_button 'Create post'
 
 				expect(page).to have_css 'img.uploaded-pic'
