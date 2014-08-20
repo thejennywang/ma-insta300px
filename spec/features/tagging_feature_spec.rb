@@ -33,4 +33,10 @@ describe 'filtering by tags' do
 		expect(page).to have_content 'Post A'
 		expect(page).not_to have_content 'Post B'
 	end
+
+	it 'should be accessible via pretty URLs' do
+		visit '/tags/swag'
+
+		expect(page).to have_content 'Post A'
+	end
 end
