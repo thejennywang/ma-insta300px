@@ -1,7 +1,7 @@
 Instagram
 ========
 ___
-My [Instagram app on Heroku](http://theinstagramapp.herokuapp.com/)
+My Instagram app on Heroku: [http://theinstagramapp.herokuapp.com/](http://theinstagramapp.herokuapp.com/)
 ___
 
 ![Instagram](http://www.esato.com/gfx/news/img/facebook-buys-instagram_1334005838.jpg)
