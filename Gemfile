@@ -31,6 +31,7 @@ group :development, :test do
 	gem 'database_cleaner'
 	gem 'rspec-collection_matchers'
   gem 'launchy'
+  gem 'factory_girl_rails'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'

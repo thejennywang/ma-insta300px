@@ -4,8 +4,7 @@ describe 'Posts' do
 
 	context 'user signed out' do
 		it 'should prompt user to sign in' do
-			logout(:user)
-      visit new_post_path
+			visit new_post_path
 
       expect(page).to have_content 'Sign in'
 		end
@@ -14,7 +13,7 @@ describe 'Posts' do
 	context 'user signed in' do
 
 		before do
-			jenny = User.create(email: 'j@j.com', password: '12345678', password_confirmation: '12345678')
+			jenny = create(:jenny)
 			login_as jenny
 		end
 
@@ -27,7 +26,7 @@ describe 'Posts' do
 
 		context 'with posts' do
 			before do
-				Post.create(title: 'Hello world', user_id: 1)
+				create(:post, title: 'Hello world')
 			end
 
 			it 'displays a list of all posts' do

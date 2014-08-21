@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'tagging post' do
 
 	before do
-		jenny = User.create(email: 'j@j.com', password: '12345678', password_confirmation: '12345678')
+    jenny = create(:jenny)
 		login_as jenny
 	end
 
@@ -21,8 +21,8 @@ end
 
 describe 'filtering by tags' do
 	before do
-		Post.create(title: 'Post A', tag_list: '#yolo, #swag', user_id: 1)
-		Post.create(title: 'Post A', tag_list: '#yolo, #bob', user_id: 1)
+    create(:post, title: 'Post A', tag_list: '#yolo, #swag')
+    create(:post, title: 'Post B', tag_list: '#yolo, #yay')
 	end
 
 	it 'filters to only show tagged posts' do
