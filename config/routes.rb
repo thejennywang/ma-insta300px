@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :tags
+  
   root to: 'posts#index'
 
 

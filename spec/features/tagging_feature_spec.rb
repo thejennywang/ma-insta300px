@@ -21,8 +21,8 @@ end
 
 describe 'filtering by tags' do
 	before do
-		Post.create(title: 'Post A', tag_list: '#yolo, #swag')
-		Post.create(title: 'Post A', tag_list: '#yolo, #bob')
+		Post.create(title: 'Post A', tag_list: '#yolo, #swag', user_id: 1)
+		Post.create(title: 'Post A', tag_list: '#yolo, #bob', user_id: 1)
 	end
 
 	it 'filters to only show tagged posts' do
