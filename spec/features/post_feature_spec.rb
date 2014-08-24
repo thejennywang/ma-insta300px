@@ -40,7 +40,7 @@ describe 'Posts' do
 				visit posts_path
 				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
-				click_button 'Create post'
+				click_button 'Post'
 
 				expect(page).to have_content 'A brand new post'
 				expect(current_path).to eq '/posts'
@@ -50,7 +50,7 @@ describe 'Posts' do
 				visit posts_path
 				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
-				click_button 'Create post'
+				click_button 'Post'
 
 				expect(page).not_to have_css 'img.uploaded-pic'
 			end
@@ -60,7 +60,7 @@ describe 'Posts' do
 				click_link 'New Post'
 				fill_in 'Title', with: 'A brand new post'
 				attach_file 'Picture', Rails.root.join('spec/images/time.jpg')
-				click_button 'Create post'
+				click_button 'Post'
 
 				expect(page).to have_css 'img.uploaded-pic'
 			end

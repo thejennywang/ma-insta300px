@@ -12,8 +12,8 @@ describe 'tagging post' do
 		click_link 'New Post'
 		fill_in 'Title', with: "A brand new post"
 		fill_in 'Tags', with: '#yolo, #swag'
-		click_button 'Create post'
-
+		click_button 'Post'
+    
 		expect(page).to have_link '#yolo'
 		expect(page).to have_link '#swag'
 	end
