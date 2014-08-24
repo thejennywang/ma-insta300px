@@ -4,7 +4,7 @@ describe 'Posts' do
 
 	context 'user signed out' do
 		it 'should prompt user to sign in' do
-			visit new_post_path
+      visit new_post_path
 
       expect(page).to have_content 'Sign in'
 		end
