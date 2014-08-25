@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Posts' do
 
-	context 'user signed out' do
+	context 'when user is signed out' do
 		it 'should prompt user to sign in' do
       visit new_post_path
 
@@ -10,7 +10,7 @@ describe 'Posts' do
 		end
 	end
 
-	context 'user signed in' do
+	context 'when user is signed in' do
 
 		before do
 			jenny = create(:jenny)

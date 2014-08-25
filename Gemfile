@@ -34,6 +34,7 @@ group :development, :test do
 	gem 'rspec-collection_matchers'
   gem 'launchy'
   gem 'factory_girl_rails'
+  gem 'poltergeist'
 end
 
 gem 'paperclip', github: 'thoughtbot/paperclip'

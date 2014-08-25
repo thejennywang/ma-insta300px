@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :posts
+  resources :posts do
+    resource :map
+  end
+  
   resources :tags
   
   root to: 'posts#index'
