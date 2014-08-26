@@ -1,8 +1,6 @@
-Instagram
-========
-[![Code Climate](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/gpa.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed)
+Instagram [![Code Climate](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/gpa.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed)
 [![Test Coverage](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/coverage.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed)
-___
+========
 My Instagram app on Heroku: [http://theinstagramapp.herokuapp.com/](http://theinstagramapp.herokuapp.com/)
 ___
 
