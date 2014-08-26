@@ -64,6 +64,19 @@ describe 'Posts' do
 
 				expect(page).to have_css 'img.uploaded-pic'
 			end
+
+      it 'can add a price to a post' do
+        visit posts_path
+
+        click_link  'New Post'
+        fill_in 'Title', with: 'A post with a price'
+        fill_in 'Price', with: '5.00'
+        click_button 'Post'
+
+        expect(page).to have_content('£5.00')
+      end
+
+
 		end
 	end
 end

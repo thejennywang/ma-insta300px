@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users 
+
+  resources :charges
 
   resources :posts do
     resource :map

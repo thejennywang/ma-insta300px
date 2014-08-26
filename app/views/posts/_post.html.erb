@@ -7,6 +7,10 @@
       <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
       <% end %><br>
 
+      <% unless post.price.blank? %>
+      Price: £<%= sprintf "%.2f", post.price %> <br />
+      <% end %>
+
       <% unless post.address.blank? %>
         Taken: <%= link_to post.address , post_map_path(post) %> <br />
       <% end %>

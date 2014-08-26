@@ -408,6 +408,14 @@
         null,
         1
       ],
+      "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/config/initializers/stripe.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
       "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -426,6 +434,8 @@
       ],
       "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/config/routes.rb": [
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -508,6 +518,10 @@
         1,
         null
       ],
+      "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/helpers/charges_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/helpers/maps_helper.rb": [
         1,
         null
@@ -520,12 +534,30 @@
         1,
         null
       ],
-      "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/controllers/maps_controller.rb": [
+      "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/controllers/charges_controller.rb": [
         1,
         1,
         null,
+        null,
         1,
-        1,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
         null,
         null
       ],
@@ -537,8 +569,17 @@
         1,
         null,
         1,
-        22,
+        25,
         null,
+        null,
+        null
+      ],
+      "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/controllers/maps_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
         null,
         null
       ],
@@ -547,7 +588,7 @@
         1,
         null,
         1,
-        12,
+        14,
         null,
         null,
         1,
@@ -555,10 +596,10 @@
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
+        5,
+        5,
+        5,
+        5,
         null,
         null,
         1,
@@ -597,7 +638,7 @@
         null,
         null,
         1,
-        13,
+        14,
         null,
         9,
         17,
@@ -615,6 +656,6 @@
         null
       ]
     },
-    "timestamp": 1409046325
+    "timestamp": 1409051340
   }
 }
