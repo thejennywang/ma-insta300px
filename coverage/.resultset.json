@@ -523,6 +523,8 @@
       "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/controllers/maps_controller.rb": [
         1,
         1,
+        null,
+        1,
         1,
         null,
         null
@@ -535,7 +537,7 @@
         1,
         null,
         1,
-        21,
+        22,
         null,
         null,
         null
@@ -557,6 +559,11 @@
         4,
         4,
         4,
+        null,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -608,6 +615,6 @@
         null
       ]
     },
-    "timestamp": 1408996640
+    "timestamp": 1409046325
   }
 }
