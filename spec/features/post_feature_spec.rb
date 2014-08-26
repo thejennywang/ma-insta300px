@@ -73,7 +73,7 @@ describe 'Posts' do
         fill_in 'Price', with: '5.00'
         click_button 'Post'
 
-        expect(page).to have_content('£5.00')
+        expect(page).to have_content('$5.00')
       end
 
 

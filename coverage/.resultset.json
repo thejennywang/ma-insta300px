@@ -536,6 +536,10 @@
       ],
       "/Users/jennywang/MakersAcademy/projects/9thweek/instagram/app/controllers/charges_controller.rb": [
         1,
+        null,
+        1,
+        null,
+        null,
         1,
         null,
         null,
@@ -569,7 +573,7 @@
         1,
         null,
         1,
-        25,
+        27,
         null,
         null,
         null
@@ -588,7 +592,7 @@
         1,
         null,
         1,
-        14,
+        15,
         null,
         null,
         1,
@@ -656,6 +660,6 @@
         null
       ]
     },
-    "timestamp": 1409051340
+    "timestamp": 1409067383
   }
 }
