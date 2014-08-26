@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem "codeclimate-test-reporter", group: :test, require: nil
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
