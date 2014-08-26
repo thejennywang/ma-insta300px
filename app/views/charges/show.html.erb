@@ -1,0 +1,12 @@
+<%= form_tag post_charge_path(@post) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: $<%= sprintf "%.2f", @post.price %></span>
+    </label>
+  </article>
+
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.application.secrets.stripe_publishable_key %>"
+        data-description="Payment for photo"
+        data-amount="<%= (@post.price * 100).floor %>"></script>
+<% end %>

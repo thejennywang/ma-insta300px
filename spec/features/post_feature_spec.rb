@@ -65,6 +65,16 @@ describe 'Posts' do
 				expect(page).to have_css 'img.uploaded-pic'
 			end
 
+      it 'can fill in an address' do
+        visit posts_path
+        click_link 'New Post'
+        fill_in 'Title', with: 'A brand new post'
+        fill_in 'Location', with: '25 City Rd, London'
+        click_button 'Post'
+
+        expect(page).to have_content '25 City Rd, London'
+      end
+
       it 'can add a price to a post' do
         visit posts_path
 

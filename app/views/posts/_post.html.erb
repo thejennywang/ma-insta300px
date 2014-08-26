@@ -8,7 +8,7 @@
       <% end %><br>
 
       <% unless post.price.blank? %>
-        <%= link_to new_charge_path, class: "btn btn-primary btn-xs" do %>
+        <%= link_to post_charge_path(post), class: "btn btn-primary btn-xs" do %>
           <span class="glyphicon glyphicon-shopping-cart"></span> $<%= sprintf "%.2f", post.price %>
         <% end %><br>
       <% end %>

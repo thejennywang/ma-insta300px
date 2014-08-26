@@ -6,9 +6,12 @@ class ChargesController < ApplicationController
   def new
   end
 
+  def show
+    @post = Post.find(params[:post_id])
+  end
+
   def create
-    # Amount in cents
-    @amount = 500
+    @post = Post.find(params[:post_id])
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -17,7 +20,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => @amount,
+      :amount      => (@post.price * 100).floor, #Amount in cents
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
