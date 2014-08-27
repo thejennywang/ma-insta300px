@@ -4,21 +4,19 @@
       <h3><%= post.title %></h3>
 
       <% if post.picture.present? %>
-      <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
-      <% end %><br>
-
-      <% unless post.price.blank? %>
-        <%= link_to post_charge_path(post), class: "btn btn-primary btn-xs" do %>
-          <span class="glyphicon glyphicon-shopping-cart"></span> $<%= sprintf "%.2f", post.price %>
-        <% end %><br>
+      <%= link_to post_charge_path(post) do %>
+        <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
       <% end %>
+      <% end %><br>
 
       <% unless post.address.blank? %>
         Taken: <%= link_to post.address , post_map_path(post) %> <br>
       <% end %>
 
-      Tags: <% post.tags.each do |tag| %>
-      <%= link_to tag.text, tag %>
+      <% unless post.tags.blank? %>
+        Tags: <% post.tags.each do |tag| %>
+        <%= link_to tag.text, tag %>
+        <% end %>
       <% end %>
     </div>
   </div>

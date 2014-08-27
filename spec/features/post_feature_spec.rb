@@ -80,10 +80,13 @@ describe 'Posts' do
 
         click_link  'New Post'
         fill_in 'Title', with: 'A post with a price'
-        fill_in 'Price', with: '5.00'
+        attach_file 'Picture', Rails.root.join('spec/images/time.jpg')
+        fill_in 'Price', with: '7.00'
         click_button 'Post'
-
-        expect(page).to have_content('$5.00')
+        visit("/posts/#{Post.first.id}/charge")
+     
+        expect(page).to have_content 'purchase'
+        expect(page).to have_content '$7.00'
       end
 
 

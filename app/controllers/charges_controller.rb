@@ -20,7 +20,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => (@post.price * 100).floor, #Amount in cents
+      :amount      => (@post.price * 100).floor, # Amount must be in pence
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )

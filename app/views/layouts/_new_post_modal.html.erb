@@ -20,7 +20,7 @@
                 <%= f.file_field :picture %><br />
 
                 <%= f.label :price %><br />
-                <%= f.text_field :price %><br />
+                $<%= f.text_field :price, value: '0.00' %><br />
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

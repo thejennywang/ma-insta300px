@@ -4,20 +4,24 @@ describe 'Payments' do
   before do
     jenny = create(:jenny)
     login_as jenny
-    create(:post, price: 7.00)
+    visit posts_path
+    click_link  'New Post'
+    fill_in 'Title', with: 'A post with a price'
+    attach_file 'Picture', Rails.root.join('spec/images/time.jpg')
+    fill_in 'Price', with: '7.00'
+    click_button 'Post'
+
+    sleep 2
   end
 
   it 'should take users to a payment page after clicking on the buy button', js: true do
-    visit posts_path
-
-    click_link '$7.00'
+    find('.uploaded-pic').click
     expect(page).to have_content 'Pay with Card'
   end
 
   it 'should take users to a payment success page after clicking on the Pay with Card button', js: true do
-    visit posts_path
 
-    click_link '$7.00'
+    find('.uploaded-pic').click
     find('.stripe-button-el').click
 
     Capybara.within_frame 'stripe_checkout_app' do
