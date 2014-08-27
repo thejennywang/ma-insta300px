@@ -8,10 +8,7 @@
 
 # Post.destroy_all
 # Tag.destroy_all
-['NYC','NYC B&W', 'NYC made of Legos', 'London Streets', 'London Cathedral', 'London at Night', 'SF Golden Gate Bridge',
-'SF B&W', 'SF at Night', 'Time'].each do |title|
-  Post.find_by(title: title).destroy
-end
+
 Post.create!(title: 'NYC', tag_list: '#nyc, #bestcityever', picture: File.new(Rails.root.join 'spec/images/nyc1.png'), user_id: 1, address: "New York City", price: 5.00)
 Post.create!(title: 'NYC B&W', tag_list: '#nyc, #blackandwhite', picture: File.new(Rails.root.join 'spec/images/nyc2.jpg'), user_id: 1, address: "New York City", price: 5.00)
 Post.create!(title: 'NYC made of Legos', tag_list: '#nyc, #legos', picture: File.new(Rails.root.join 'spec/images/nyc3.jpg'), user_id: 1, address: "New York City", price: 5.00)
@@ -22,3 +19,8 @@ Post.create!(title: 'SF Golden Gate Bridge', tag_list: '#sf, #goldengatebridge',
 Post.create!(title: 'SF B&W', tag_list: '#sf, #blackandwhite', picture: File.new(Rails.root.join 'spec/images/sf2.jpg'), user_id: 1, address: "San Francisco, USA", price: 5.00)
 Post.create!(title: 'SF at Night', tag_list: '#sf, #night', picture: File.new(Rails.root.join 'spec/images/sf3.jpg'), user_id: 1, address: "San Francisco, USA", price: 5.00)
 Post.create!(title: 'Time', tag_list: '#time, #weaintgotnone', picture: File.new(Rails.root.join 'spec/images/time.jpg'), user_id: 1, address: "", price: 5.00)
+
+# ['NYC','NYC B&W', 'NYC made of Legos', 'London Streets', 'London Cathedral', 'London at Night', 'SF Golden Gate Bridge',
+# 'SF B&W', 'SF at Night', 'Time'].each do |title|
+#   Post.find_by(title: title).destroy
+# end

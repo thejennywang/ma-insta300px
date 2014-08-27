@@ -7,10 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="//d36xtkk24g8jdx.cloudfront.net/bluebar/c38fc5b/images/ico/favicon.ico">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     
     <title>Instagram</title>
   </head>
+      
+      <script src="http://js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
+      <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript">
+        // Enable pusher logging - don't include this in production
+        Pusher.log = function(message) {
+          if (window.console && window.console.log) {
+            window.console.log(message);
+          }
+        };
+
+        var pusher = new Pusher('3522eb986cc25bcb20e2');
+        var channel = pusher.subscribe('theinstagramapp_channel');
+        channel.bind('new_upload', function(data) {
+          $('main').prepend("<article class='post col-sm-6 col-md-4'><div class='panel panel-default'><div class='panel-body'><h1>" + data.message + "</h1></div></div></article>");
+        });
+      </script>
 
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -30,6 +47,7 @@
       </div>
     </div>
     <main class="container">
+      
       <%= yield %>
 
       <hr>
