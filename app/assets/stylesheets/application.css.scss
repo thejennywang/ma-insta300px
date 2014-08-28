@@ -52,10 +52,18 @@ body {
 
   h3 {
     margin-top: 0;
-  } 
-
+    text-align: center;
+  }
 }
 
+.like-btn {
+
+  float: right;
+
+  .glyphicon {
+    color: #FF355E;
+  }
+}
 
 footer {
   text-align: center;

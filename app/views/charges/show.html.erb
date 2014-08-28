@@ -1,23 +1,26 @@
-<article class='post col-sm-6 col-md-4'>
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <h3><%= @post.title %></h3>
+<div class="container">
+  <article class='post col-lg-10 col-md-offset-1'>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h3><%= @post.title %></h3>
 
-      <% if @post.picture.present? %>
-      <%= image_tag @post.picture.url(:medium), class: 'uploaded-pic' %>
-      <% end %><br>
+        <% if @post.picture.present? %>
+        <%= image_tag @post.picture.url, class: 'uploaded-pic' %>
+        <% end %><br>
+      </div>
     </div>
-  </div>
-</article>
-
-<h1>Want to purchase this print?</h1>
-<div class="payment-container">
-<%= form_tag post_charge_path(@post) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: $<%= sprintf "%.2f", @post.price %></span>
-    </label>
   </article>
+</div>
+
+  <h1>Want to purchase this print?</h1>
+  <div class="payment-container">
+  <%= form_tag post_charge_path(@post) do %>
+    <article>
+      <label class="amount">
+        <h4>Amount: $<%= sprintf "%.2f", @post.price %></h4>
+      </label>
+    </article>
+  </div>
 
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="<%= Rails.application.secrets.stripe_publishable_key %>"

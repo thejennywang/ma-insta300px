@@ -19,6 +19,10 @@
         1,
         null
       ],
+      "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/helpers/likes_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/helpers/maps_helper.rb": [
         1,
         null
@@ -45,16 +49,16 @@
         null,
         null,
         1,
-        1,
+        0,
         null,
-        1,
-        null,
-        null,
+        0,
         null,
         null,
-        1,
         null,
-        1,
+        null,
+        0,
+        null,
+        0,
         null,
         null,
         null,
@@ -78,6 +82,16 @@
         null,
         null
       ],
+      "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/controllers/likes_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
       "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/controllers/maps_controller.rb": [
         1,
         1,
@@ -92,7 +106,7 @@
         1,
         null,
         1,
-        20,
+        21,
         null,
         null,
         1,
@@ -104,10 +118,17 @@
         8,
         8,
         8,
+        8,
+        null,
+        8,
         null,
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         null
@@ -119,7 +140,13 @@
         null,
         null
       ],
+      "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/models/like.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/models/post.rb": [
+        1,
         1,
         1,
         1,
@@ -160,6 +187,6 @@
         null
       ]
     },
-    "timestamp": 1409163210
+    "timestamp": 1409186135
   }
 }

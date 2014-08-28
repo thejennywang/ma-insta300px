@@ -12,12 +12,19 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address, :price))
     @post.user = current_user
-		@post.save
-		redirect_to posts_path
+		if @post.save
+      data = { banana: @post.id }
+      Pusher['theinstagramapp_channel'].trigger('new_upload', data)
+    end
+    redirect_to posts_path
 	end
 
   def show
     @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js { render partial: 'post', locals: { post: @post } }
+    end
   end
 
 end

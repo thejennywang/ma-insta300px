@@ -4,10 +4,10 @@
       <h3><%= post.title %></h3>
 
       <% if post.picture.present? %>
-      <%= link_to post_charge_path(post) do %>
-        <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+        <%= link_to post_charge_path(post) do %>
+          <%= image_tag post.picture.url(:medium), class: 'uploaded-pic' %>
+        <% end %><br>
       <% end %>
-      <% end %><br>
 
       <% unless post.address.blank? %>
         Taken: <%= link_to post.address , post_map_path(post) %> <br>
@@ -18,6 +18,14 @@
         <%= link_to tag.text, tag %>
         <% end %>
       <% end %>
+
+      <%= link_to post_likes_path(post), class: 'like-btn' do %>
+        <div class="like-btn btn btn-default btn-xs ">
+          <span class="glyphicon glyphicon-heart"></span> 
+          <span class="like_count"><%= post.likes.count %></span>
+        </div>
+      <% end %>
+      
     </div>
   </div>
 </article>

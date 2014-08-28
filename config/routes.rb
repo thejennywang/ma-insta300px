@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
 
   resources :posts do
+    resources :likes
     resource :charge
     resource :map
   end
   
   resources :tags
-  
+
   root to: 'posts#index'
 
 

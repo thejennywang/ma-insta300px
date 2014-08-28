@@ -5,4 +5,24 @@
 
 <% else %>
 	No posts yet
-<% end %> 
+<% end %>
+ 
+<script type="text/javascript">
+  // Enable pusher logging - don't include this in production
+  Pusher.log = function(message) {
+    if (window.console && window.console.log) {
+      window.console.log(message);
+    }
+  };
+
+  var pusher = new Pusher('3522eb986cc25bcb20e2');
+  var channel = pusher.subscribe('theinstagramapp_channel');
+
+  channel.bind('new_upload', function(data) {
+    console.log("new upload!");
+    $.get("/posts/" + data.banana + ".js", function(post_data) {
+      console.log("data has arrived");
+      $("main .row").prepend(post_data);
+    });
+  });
+</script>
