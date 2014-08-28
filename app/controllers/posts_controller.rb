@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address, :price))
     @post.user = current_user
 		if @post.save
-      data = { banana: @post.id }
+      data = { id: @post.id }
       Pusher['theinstagramapp_channel'].trigger('new_upload', data)
     end
     redirect_to posts_path
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     respond_to do |format|
       format.html
-      format.js { render partial: 'post', locals: { post: @post } }
+      format.json { render partial: 'post', locals: { post: @post } }
     end
   end
 
