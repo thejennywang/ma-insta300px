@@ -19,11 +19,12 @@
   var channel = pusher.subscribe('theinstagramapp_channel');
 
   channel.bind('new_upload', function(data) {
-    console.log("new upload!");
+
     $.get("/posts/" + data.id + ".json", function(post_data) {
-      console.log("data has arrived");
-      console.log(post_data);
-      $("main .row").prepend(post_data);
+
+      var newPost = Mustache.render($('#post_template').html(), post)
+
+      $(newProfile).prependTo("main .row");
     });
   });
 </script>

@@ -9,9 +9,10 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     
-    <title>Instagram</title>
-    <script src="http://js.pusher.com/2.2/pusher.min.js" type="text/javascript"></script>
+    <title>Insta3∞px</title>
+    <script src="http://js.pusher.com/2.2/pusher.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/vendor/assets/javascripts/mustache.js" id="template" type="x-tmpl-mustache"> </script> 
   </head>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -22,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="/"> Instagram <span class="glyphicon glyphicon-heart-empty"></span></span> </a>
+            <a class="navbar-brand" href="/"> Insta3∞px <span class="glyphicon glyphicon-heart-empty"></span></span> </a>
         </div>
         <div class="navbar-collapse collapse">
           <%= render partial: 'layouts/navigation' %>
@@ -33,11 +34,14 @@
       
       <%= yield %>
 
+    </main>
+
+    <section class="container">
       <hr>
       <footer>
-        <p>This mock Instagram app is made by Jenny Wang (<a href="http://www.github.com/thejennywang">thejennywang@git</a>), at <a href="http://www.makersacademy.com">Makers Academy</a>.</p>
+        <p>Insta3∞px is made by <a href="http://www.github.com/thejennywang">Jenny Wang</a>, at <a href="http://www.makersacademy.com">Makers Academy</a>. &copy; 2014</p> 
       </footer>
-    </main>
+    </section>
       <!-- New Post Modal -->
       <%= render partial: 'layouts/new_post_modal' %>
       

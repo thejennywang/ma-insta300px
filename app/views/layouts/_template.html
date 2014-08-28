@@ -1,0 +1,33 @@
+<template id="post_template">
+  <article class='post col-sm-6 col-md-4'>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h3>{{ title }}</h3>
+
+        <% if post.picture.present? %>
+          <%= link_to post_charge_path(post) do %>
+            {{ picture }}, class: 'uploaded-pic' %>
+          <% end %><br>
+        <% end %>
+
+        <% unless post.address.blank? %>
+          Taken: <%= link_to post.address , post_map_path(post) %> <br>
+        <% end %>
+
+        <% unless post.tags.blank? %>
+          Tags: <% post.tags.each do |tag| %>
+          <%= link_to tag.text, tag %>
+          <% end %>
+        <% end %>
+
+        <%= link_to post_likes_path(post), class: 'like-btn' do %>
+          <div class="like-btn btn btn-default btn-xs">
+            <span class="glyphicon glyphicon-heart"></span> 
+            <span class="like_count"><%= post.likes.count %></span>
+          </div>
+        <% end %>
+        
+      </div>
+    </div>
+  </article>
+</template>

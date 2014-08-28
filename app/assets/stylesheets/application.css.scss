@@ -21,11 +21,16 @@ body {
 }
 
 .navbar-inverse .navbar-brand {
+  font-size: 36px;
   color: #FFFFFF;
+  span {
+    font-size: 30px;
+  }
 }
 
 .form-group {
   color: #FFF;
+  font-size: 18px;
 }
 
 @media(max-width: 767px) {
