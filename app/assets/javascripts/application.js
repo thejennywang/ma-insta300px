@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require gmaps
+//= require pusher.min
 //= require mustache
 //= require_tree .
 //= require bootstrap-sprockets

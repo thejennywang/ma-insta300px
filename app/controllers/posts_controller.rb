@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Post.all	
+    @posts = Post.order(created_at: :desc)
 	end
 
 	def new
@@ -13,10 +14,18 @@ class PostsController < ApplicationController
 		@post = Post.new(params[:post].permit(:title, :picture, :tag_list, :address, :price))
     @post.user = current_user
 		if @post.save
-      post_data = { title: @post.title, picture: @post.picture.url(:medium), tags: @post.tags, likes: @post.likes }
+      post_data = { 
+        id: @post.id, 
+        title: @post.title, 
+        charge_url: "/posts/#{@post.id}/charge", 
+        picture_url: @post.picture.url(:medium), 
+        address: @post.address, 
+        map_url: "/posts/#{@post.id}/map", 
+        tag_list: @post.tags.map { |tag| {text: tag.text, url: "/tags/#{tag.text.delete('#')}"} }, 
+        like_count: @post.likes.count }
       Pusher['theinstagramapp_channel'].trigger('new_upload', post_data)
     end
-    redirect_to posts_path
+      redirect_to "/"
 	end
 
   def show

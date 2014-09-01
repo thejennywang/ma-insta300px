@@ -14,7 +14,9 @@ class Post < ActiveRecord::Base
 
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
   validates :user_id, presence: true
-  validates :title, presence: true
+  validates :title, presence: {message: "You must add a title"}
+  validates :picture, presence: {message: "You must add a picture"}
+  validates :address, presence: {message: "You must add a location"}
   validates :price, presence: true, numericality: true
 
 	def tag_list

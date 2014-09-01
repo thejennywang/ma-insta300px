@@ -38,6 +38,7 @@ group :development, :test do
 	gem 'rspec-collection_matchers'
   gem 'launchy'
   gem 'factory_girl_rails'
+  gem 'warden'
   gem 'poltergeist'
   gem 'simplecov'
 end
@@ -45,7 +46,6 @@ end
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 gem 'devise'
-gem 'warden'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'

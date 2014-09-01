@@ -1,33 +1,27 @@
-<template id="post_template">
+<script id="post_template" type="x-tmpl-mustache">
   <article class='post col-sm-6 col-md-4'>
     <div class="panel panel-default">
       <div class="panel-body">
         <h3>{{ title }}</h3>
 
-        <% if post.picture.present? %>
-          <%= link_to post_charge_path(post) do %>
-            {{ picture }}, class: 'uploaded-pic' %>
-          <% end %><br>
-        <% end %>
+          <a href= "{{ charge_url }}">
+            <img src="{{ picture_url }}" class="uploaded-pic">
+          </a><br>
 
-        <% unless post.address.blank? %>
-          Taken: <%= link_to post.address , post_map_path(post) %> <br>
-        <% end %>
+          Taken: <a href="{{ map_url }}">{{ address }}</a><br>
 
-        <% unless post.tags.blank? %>
-          Tags: <% post.tags.each do |tag| %>
-          <%= link_to tag.text, tag %>
-          <% end %>
-        <% end %>
+          Tags: {{ #tag_list }}
+            <a href="{{ url }}">{{ text }}</a>
+          {{ /tag_list }}
 
-        <%= link_to post_likes_path(post), class: 'like-btn' do %>
+        <a href="{{ like_url }}">
           <div class="like-btn btn btn-default btn-xs">
             <span class="glyphicon glyphicon-heart"></span> 
-            <span class="like_count"><%= post.likes.count %></span>
+            <span class="like_count"> {{ like_count }}</span>
           </div>
-        <% end %>
+        </a>
         
       </div>
     </div>
   </article>
-</template>
+</script>

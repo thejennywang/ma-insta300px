@@ -1,25 +1,40 @@
-<% if current_user %>
-  <%= form_for(session, as: :user, url: destroy_user_session_path, method: :delete, html: { class: 'navbar-form navbar-right' } ) do |f| %>
-    <div class="form-group"> Logged in as <%= current_user.email %></div>
-    <!-- New Post Model trigger -->
-    <%= link_to '#', :class => "btn btn-success navbar-btn", :'data-toggle' => "modal", :'data-target' => "#newPostModal" do %>
-        <span>New Post</span>
-        <span class="glyphicon glyphicon-edit"></span> 
-    <% end%>
-
-      <%= f.submit "Sign out", class: "btn btn-danger" %>
-  <% end %>
-<% else %>
-  <%= form_for(User.new, as: :user, url: new_user_session_path, html: { class: 'navbar-form navbar-right' } ) do |f| %>
-    <div class="form-group">
-      <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/"> Insta3∞px <span class="glyphicon glyphicon-heart-empty"></span></span> </a>
     </div>
+    <div class="navbar-collapse collapse">
+      <% if current_user %>
+        <%= form_for(session, as: :user, url: destroy_user_session_path, method: :delete, html: { class: 'navbar-form navbar-right' } ) do |f| %>
+          <div class="form-group"> Logged in as <%= current_user.email %></div>
+          <!-- New Post Model trigger -->
+          <%= link_to '#', :class => "btn btn-success navbar-btn", :'data-toggle' => "modal", :'data-target' => "#newPostModal" do %>
+              <span>New Post</span>
+              <span class="glyphicon glyphicon-edit"></span> 
+          <% end%>
 
-    <div class="form-group">
-      <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+            <%= f.submit "Sign out", class: "btn btn-danger" %>
+        <% end %>
+      <% else %>
+        <%= form_for(User.new, as: :user, url: new_user_session_path, html: { class: 'navbar-form navbar-right' } ) do |f| %>
+          <div class="form-group">
+            <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+          </div>
+
+          <%= f.submit "Sign in", class: "btn btn-success" %>
+          <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
     </div>
-
-    <%= f.submit "Sign in", class: "btn btn-success" %>
-    <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary' %>
-  <% end %>
-<% end %>
+  </div>
+</div>
