@@ -22,10 +22,13 @@ class PostsController < ApplicationController
         address: @post.address, 
         map_url: "/posts/#{@post.id}/map", 
         tag_list: @post.tags.map { |tag| {text: tag.text, url: "/tags/#{tag.text.delete('#')}"} }, 
-        like_count: @post.likes.count }
+        like_count: @post.likes.count 
+      }
       Pusher['theinstagramapp_channel'].trigger('new_upload', post_data)
+    else
+      flash[:error] 
+      redirect_to '/'
     end
-      redirect_to "/"
 	end
 
   def show

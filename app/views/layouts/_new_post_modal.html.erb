@@ -7,7 +7,7 @@
           </div>
           <%= form_for @new_post, html: { multipart: true } do |f| %>
             <div class="modal-body">
-                <%= f.label :title %><br />
+                <%= f.label :title, 'Title*' %><br />
                 <%= f.text_field :title %> <br />
                 
                 <%= f.label :tag_list, 'Tags' %> <br />
@@ -16,10 +16,10 @@
                 <%= f.label :address, 'Location' %> <br />
                 <%= f.text_field :address %> <br />
                 
-                <%= f.label :picture %><br />
+                <%= f.label :picture, 'Picture*' %><br />
                 <%= f.file_field :picture %><br />
 
-                <%= f.label :price %><br />
+                <%= f.label :price, 'Price*' %><br />
                 $<%= f.text_field :price, value: '0.00' %><br />
             </div>
             <div class="modal-footer">
