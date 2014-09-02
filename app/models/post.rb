@@ -16,7 +16,6 @@ class Post < ActiveRecord::Base
   validates :user_id, presence: true
   validates :title, presence: {message: "You must add a title"}
   validates :picture, presence: {message: "You must add a picture"}
-  validates :address, presence: {message: "You must add a location"}
   validates :price, presence: true, numericality: true
 
 	def tag_list
