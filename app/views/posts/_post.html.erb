@@ -9,6 +9,8 @@
         <% end %><br>
       <% end %>
 
+      <small class="text-muted"><em>Uploaded by <%= post.user.email %></em></small><br />
+
       <% unless post.address.blank? %>
         Taken: <%= link_to post.address , post_map_path(post) %> <br>
       <% end %>

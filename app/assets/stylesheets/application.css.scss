@@ -53,11 +53,18 @@ body {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    margin-bottom: -15px;
+
   }
 
   h3 {
     margin-top: 0;
     text-align: center;
+  }
+
+  small {
+    margin-bottom: -15px;
+    float: right;
   }
 }
 
