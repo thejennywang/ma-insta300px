@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   styles: { medium: "350x350#"},
   :storage => :s3,
   :s3_credentials => {
-    :bucket => 'theinstragram',
+    :bucket => 'insta300px',
     :access_key_id => Rails.application.secrets.s3_access_key_id,
     :secret_access_key => Rails.application.secrets.s3_secret_access_key
   }
