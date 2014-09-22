@@ -1,5 +1,6 @@
 # Instagram [![Code Climate](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/gpa.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed) [![Test Coverage](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/coverage.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed)
-My Instagram app on Heroku: [http://theinstagramapp.herokuapp.com/](http://theinstagramapp.herokuapp.com/)
+The Instagram App (first iteration) on Heroku: [http://theinstagramapp.herokuapp.com/](http://theinstagramapp.herokuapp.com/)
+The Instagram App (second iteration) on Heroku: [http://theinstagramapp.herokuapp.com/](http://insta300px.herokuapp.com/)
 ___
 
 ![Instagram](http://www.esato.com/gfx/news/img/facebook-buys-instagram_1334005838.jpg)
