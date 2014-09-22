@@ -26,7 +26,10 @@ describe 'Posts' do
 
 		context 'with posts' do
 			before do
-				create(:post, title: 'Hello world')
+        jenny2 = create(:jenny2)
+        login_as jenny2
+        post = create(:post, title: 'Hello world')
+        jenny2.posts << post
 			end
 
 			it 'displays a list of all posts' do
@@ -43,7 +46,7 @@ describe 'Posts' do
 				click_button 'Post'
 
 				expect(page).to have_content 'A brand new post'
-				expect(current_path).to eq '/posts'
+				expect(current_path).to eq '/'
 			end
 
 			it 'displays no image, if no picture attached' do

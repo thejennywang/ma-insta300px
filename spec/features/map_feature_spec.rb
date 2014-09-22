@@ -5,11 +5,12 @@ describe 'Maps' do
   before do
     jenny = create(:jenny)
     login_as jenny
-    create(:post, address: '25 City Rd, London')
+    @test_post = create(:post, address: '25 City Rd, London')
+    jenny.posts << @test_post
   end
 
   it 'displays a map when map button is clicked', js: true do
-    visit '/'
+    visit posts_path
     click_link '25 City Rd, London'
 
     # testing for prescence of Google Maps map

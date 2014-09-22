@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 	def index
 		@posts = Post.all	
     @posts = Post.order(created_at: :desc)
+    @posts
 	end
 
 	def new
@@ -15,7 +16,7 @@ class PostsController < ApplicationController
     @post.user = current_user
 		if @post.save
       post_data = { 
-        id: @post.id, 
+        post_id: @post.id, 
         title: @post.title, 
         charge_url: "/posts/#{@post.id}/charge", 
         picture_url: @post.picture.url(:medium), 
@@ -32,10 +33,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.json { render partial: 'post', locals: { post: @post } }
-    end
+    render "show.html.erb"
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render partial: 'post', locals: { post: @post } }
+    # end
   end
 
 end

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.like-btn ').on('click', function(event) {
+  $('.like-link').on('click', function(event) {
     var likeCount = $(this).find('.like_count')
 
     event.preventDefault();

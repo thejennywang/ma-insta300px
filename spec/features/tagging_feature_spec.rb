@@ -21,8 +21,12 @@ end
 
 describe 'filtering by tags' do
 	before do
-    create(:post, title: 'Post A', tag_list: '#yolo, #swag')
-    create(:post, title: 'Post B', tag_list: '#yolo, #yay')
+		jenny = create(:jenny)
+		login_as jenny
+    @test_post_1 = create(:post, title: 'Post A', tag_list: '#yolo, #swag')
+    @test_post_2 = create(:post, title: 'Post B', tag_list: '#yolo, #yay')
+    jenny.posts << @test_post_1
+    jenny.posts << @test_post_2
 	end
 
 	it 'filters to only show tagged posts' do

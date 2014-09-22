@@ -21,7 +21,7 @@
         <% end %>
       <% end %>
 
-      <%= link_to post_likes_path(post), class: 'like-btn' do %>
+      <%= link_to post_likes_path(post), class: 'like-link' do %>
         <div class="like-btn btn btn-default btn-xs">
           <span class="glyphicon glyphicon-heart"></span> 
           <span class="like_count"><%= post.likes.count %></span>
