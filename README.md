@@ -1,7 +1,7 @@
 # Insta300px [![Code Climate](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/gpa.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed) [![Test Coverage](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/badges/1f80d28c3f2aa19029fa/coverage.svg)](https://codeclimate.com/repos/53fa725fe30ba058b601fe7c/feed)
 
-### Insta300px on Heroku: [http://insta300px.herokuapp.com/](http://insta300px.herokuapp.com/)
-
+Insta300px on Heroku: [http://insta300px.herokuapp.com/](http://insta300px.herokuapp.com/)
+----------
 
 This week's project is to add more functionality to [The Instagram App](http://theinstagramapp.herokuapp.com/), our Instagram clone.
 ![Instagram](http://www.thealmightyjenny.com/wp-content/uploads/2014/09/Screen-Shot-2014-09-24-at-4.41.38-PM.png)
