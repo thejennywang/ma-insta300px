@@ -166,11 +166,6 @@
         null,
         null
       ],
-      "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/models/like.rb": [
-        1,
-        1,
-        null
-      ],
       "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/models/post.rb": [
         1,
         1,
@@ -211,8 +206,13 @@
         10,
         null,
         null
+      ],
+      "/Users/jennywang/MakersAcademy/projects/10thweek/insta300px/app/models/like.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1411405176
+    "timestamp": 1411587339
   }
 }
