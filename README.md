@@ -20,3 +20,4 @@ For this project, we aim be deploying much more regularly - ideally a few times 
 * Bootstrap for styling & modals
 * GMaps API for mapping functionality
 * Postgres DB
+
