@@ -10,7 +10,7 @@ Post.destroy_all
 Tag.destroy_all
 User.destroy_all
 
-User.create!(id: 1, email: 'j2@j.com', password: '12345678', password_confirmation: '12345678')
+User.create!(id: 1, email: 'jenny@makersacademy.com', password: '12345678', password_confirmation: '12345678')
 
 Post.create!(title: 'NYC', tag_list: '#nyc, #bestcityever', picture: File.new(Rails.root.join 'spec/images/nyc1.png'), user_id: 1, address: "New York City", price: 5.00)
 Post.create!(title: 'NYC B&W', tag_list: '#nyc, #blackandwhite', picture: File.new(Rails.root.join 'spec/images/nyc2.jpg'), user_id: 1, address: "New York City", price: 5.00)
