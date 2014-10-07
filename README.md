@@ -4,7 +4,7 @@ Insta300px on Heroku: [http://insta300px.herokuapp.com/](http://insta300px.herok
 ----------
 
 This week's project is to add more functionality to [The Instagram App](http://theinstagramapp.herokuapp.com/), our Instagram clone.
-![Instagram](http://www.thealmightyjenny.com/wp-content/uploads/2014/09/Screen-Shot-2014-09-24-at-4.41.38-PM.png)
+![Screenshot](/app/assets/images/screenshot.png?raw=true "Screenshot")
  The goal is to continue to solidifying our knowledge of Rails and adding on eCommerce and other functionality to our app. 
 For this project, we aim be deploying much more regularly - ideally a few times every day.
 
