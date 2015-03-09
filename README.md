@@ -12,7 +12,7 @@ For this project, we aim be deploying much more regularly - ideally a few times 
 
 * Ruby on Rails
 * Javascript & AJAX
-* jQuery & jQuery UI
+* jQuery UI
 * RSpec & Capybara for testing Ruby components
 * Poltergeist/Phantom JS for testing JavaScript components
 * Pusher for user notifications
